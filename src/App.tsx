@@ -1,25 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import PaginaIndisponibila from './pages/PaginaIndisponibila'
+import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+
+import getAll from './services/req-handler';
+import Produse from './pages/Produse';
 
 function App() {
+  
   return (
+    <BrowserRouter>
+      <nav>
+        <Link to={''}>Artizanalii</Link>
+        <Link to={''}>Despre</Link>
+        <Link to={'Produse'}>Produse</Link>
+        <Link to={''}>Logare</Link>
+      </nav>
+      <Routes>
+        <Route path='/' element={''}></Route>
+        <Route path='/despre' element={''}></Route>
+        <Route path='/Logare' element={''}></Route>
+        <Route path='/creare-cont' element={''}></Route>
+        <Route path='/delogare' element={''}></Route>
+        <Route path='/produse' element={<Produse />}></Route>
+
+        <Route path='*' element={<PaginaIndisponibila />}></Route>
+      </Routes>
+
+      
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
     </div>
+    </BrowserRouter>
   );
 }
 
