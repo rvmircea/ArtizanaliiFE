@@ -2,11 +2,16 @@ body{
   background-color: rgb(243, 243, 243);
   letter-spacing: 0.1rem;
   font-family: 'Asap', sans-serif;
+  color: rgb(61, 61, 61);
 }
 
 nav{
   display: flex;
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(233, 233, 233);
+  font-size: 2.5rem;
+  border-bottom: rgb(61, 61, 61) 1px solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 nav>:nth-child(1){
@@ -30,22 +35,24 @@ nav>:nth-child(4){
 
 
 a{
-  color: white;
+  /* color: white; */
+  color: rgb(61, 61, 61);
   text-decoration: none;
   margin-top: 1rem;
   margin-bottom: 1rem;
   
   
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
   transition: color 0.2s ease-in;
 }
 
 a:hover{
-  color:rgb(218, 218, 218);
+  color:rgb(91, 91, 91);
+  text-decoration: underline 2px;
 }
 
 h2{
-  color: rgb(61, 61, 61);
+  /* color: rgb(61, 61, 61); */
   margin-top: 20%;
   text-align: center;
   font-size: 3rem;
@@ -54,7 +61,7 @@ h2{
 .ListaProduse{
   margin-left: 10%;
   font-size: 1.4rem;
-  color:rgb(61, 61, 61);
+  /* color:rgb(61, 61, 61); */
 }
 
 li{
@@ -77,4 +84,47 @@ li{
   border: red solid 2px;
   background-color: rgb(255, 254, 254);
   box-shadow: red 1px 1px;
+}
+
+.despre{
+  font-size: 5rem;
+  background-color: rgb(233, 233, 233);
+  color: rgb(61, 61, 61);
+  margin-top: 5%;
+  border-top:rgb(61, 61, 61) 3px solid;
+  border-bottom:rgb(61, 61, 61) 3px solid;
+  
+}
+
+.despre >p{
+  margin: 0% 20%;
+  padding: 10% 10%;
+  text-align: center;
+}
+
+ #bere{
+  color: rgb(236, 192, 46);
+  text-decoration: underline 2px black;
+  
+}
+
+#bere:hover{
+  color: rgb(236, 202, 58);
+  text-decoration: underline 2px black;
+  
+}
+
+
+#vin{
+  color: rgb(160, 14, 43);
+  text-decoration: underline 2px black;
+}
+
+#vin:hover{
+  color: rgb(133, 7, 32);
+  text-decoration: underline 2px black;
+}
+
+#vin :hover{
+  text-decoration: underline 0px white;
 }
