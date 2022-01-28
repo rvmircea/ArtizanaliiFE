@@ -128,3 +128,10 @@ li{
 #vin :hover{
   text-decoration: underline 0px white;
 }
+
+.LogInForm{
+  align-content: center;
+}
+form{
+  margin-top: 5%;
+}

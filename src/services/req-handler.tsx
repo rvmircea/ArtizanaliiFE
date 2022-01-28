@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios, {AxiosResponse} from "axios";
 
-// let axios = require('axios');
+// const axios = require('axios').default;
 
 const urlAll: string = 'http://localhost:51002/api/produs/all';
 const url: string = 'http://localhost:51002/api/produs';
@@ -13,7 +13,7 @@ interface Produs {
     pret: number,
     an: number,
     descriere: string,
-    producatorId: number
+    producatorId: number 
 }
 
 // const getAll = async () => {
@@ -34,24 +34,24 @@ interface Produs {
 //     descriere: string,
 // }
 
-const getAll = () => {
-    const req = axios.get(urlAll);
-    return req.then(res => res.data)
+const getAll = async () => {
+    const req:AxiosResponse<Produs[]> = await axios.get<Produs[]>(urlAll);
+    return req.data
 }
 
-const createProdus = (obj: Produs) => {
-    const req = axios.post(url, obj);
-    return req.then(res => res.data)
+const createProdus = async (obj: Produs) => {
+    const req: AxiosResponse<Produs> = await axios.post<Produs>(url, obj);
+    return req
 }
 
-const updateProdus = (id: number, obj: Produs) => {
-    const req = axios.put(`${url}/${id}`, obj);
-    return req.then(res => res.data)
+const updateProdus = async (id: number, obj: Produs) => {
+    const req: AxiosResponse<Produs> = await axios.put<Produs>(`${url}/${id}`, obj);
+    return req
 }
 
-const deleteProdus = (id: number) => {
-    const req = axios.delete(`${url}/${id}`);
-    return req.then(res => res.data);
+const deleteProdus = async (id: number) => {
+    const req = await axios.delete(`${url}/${id}`);
+    return req
 }
 
 export default {
