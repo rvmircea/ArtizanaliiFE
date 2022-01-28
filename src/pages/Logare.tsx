@@ -7,19 +7,23 @@ const Logare = () => {
 
     const [email, setEmail] = useState<string>('');
     const [passwrod, setPassword] = useState<string>('');
-    const [redirect, setRedirect] = useState(false)
+    
     const navigate = useNavigate()
 
     const submitHandler = async (event:SyntheticEvent) =>{
         event.preventDefault();
 
-        await services.LogInUser(email, passwrod);
+        const res = await services.LogInUser(email, passwrod);
+        console.log(res);
+        localStorage.setItem('jwt', res.data.jwt)
+
+        console.log(document.cookie);
         
-        setRedirect(true)
+        // setRedirect(true)
         
-        if(redirect){
-            navigate('/Acasa', {replace: true})
-        }
+        navigate('/Acasa', {replace: true})
+        
+        
         
         
     }
