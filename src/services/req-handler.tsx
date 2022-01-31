@@ -7,13 +7,13 @@ const url: string = 'http://localhost:51002/api/produs';
 
 
 interface Produs {
-    id:number,
-    denumire: string,
-    rating: number,
-    pret: number,
-    an: number,
-    descriere: string,
-    producatorId: number 
+    id:number;
+    denumire: string;
+    rating: number;
+    price: number;
+    an: number;
+    descriere: string;
+    producatorId: number; 
 }
 
 // const getAll = async () => {

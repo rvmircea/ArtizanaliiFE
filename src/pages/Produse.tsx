@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import services from "../services/req-handler";
 
 interface Produs {
-        id:number,
-        denumire: string,
-        rating: number,
-        pret: number,
-        an: number,
-        descriere: string,
-        producatorId: number
+        id:number;
+        denumire: string;
+        rating: number;
+        price: number;
+        an: number;
+        descriere: string;
+        producatorId: number;
 }
 
 
@@ -43,8 +43,8 @@ const Produse = () => {
                     {produse.map( (item:Produs) => 
                     <li key={item.id}>
                         {item.id} id--
-                        {item.denumire} - {item.pret} lei
-                       <span /> <button className={'buttonDelete'}onClick={() => deleteHandler(item.id)}> DELETE </button>
+                        {item.denumire} - {item.price} lei
+                        <button className={'buttonDelete'}onClick={() => deleteHandler(item.id)}> DELETE </button>
                     </li>)}
             </ul>   
         </div>

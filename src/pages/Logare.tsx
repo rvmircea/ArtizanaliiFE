@@ -1,5 +1,5 @@
 import React, { SyntheticEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import services from "../services/Log-handler";
 
 
@@ -14,18 +14,9 @@ const Logare = () => {
         event.preventDefault();
 
         const res = await services.LogInUser(email, passwrod);
-        console.log(res);
         localStorage.setItem('jwt', res.data.jwt)
-
-        console.log(document.cookie);
-        
-        // setRedirect(true)
         
         navigate('/Acasa', {replace: true})
-        
-        
-        
-        
     }
 
     return (
@@ -44,7 +35,6 @@ const Logare = () => {
 
                 <button type="submit">Logare</button>
                 </form>
-            
         </div>
     )
 }

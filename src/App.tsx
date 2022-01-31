@@ -8,6 +8,7 @@ import Produse from './pages/Produse';
 import Despre from './pages/Despre';
 import Logare from './pages/Logare';
 import Acasa from './pages/Acasa'
+import Inregistrare from './pages/Inregistrare';
 
 function App() {
   
@@ -18,12 +19,13 @@ function App() {
         <Link to={'Despre'}>Despre</Link>
         <Link to={'Produse'}>Produse</Link>
         <Link to={'Logare'}>Logare</Link>
+        <Link to={'Inregistrare'}>Înregistrare</Link>
       </nav>
       <Routes>
         <Route path='/acasa' element={<Acasa />}></Route>
         <Route path='/despre' element={<Despre />}></Route>
         <Route path='/logare' element={<Logare />}></Route>
-        <Route path='/creare-cont' element={''}></Route>
+        <Route path='/inregistrare' element={<Inregistrare />}></Route>
         <Route path='/delogare' element={''}></Route>
         <Route path='/produse' element={<Produse />}></Route>
 

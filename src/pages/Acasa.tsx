@@ -16,7 +16,8 @@ const Acasa = () =>{
     
     return (
         <div>
-            <h3>Bine ai venit {JSON.stringify(user)}</h3>
+            {user? <h3>Bine ai venit {JSON.stringify(user)}</h3> : <></>}
+            {/* <h3>Bine ai venit {JSON.stringify(user)}</h3> */}
         </div>
     )
 }
